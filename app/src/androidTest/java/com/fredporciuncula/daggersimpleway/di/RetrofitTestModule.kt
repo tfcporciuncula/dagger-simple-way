@@ -11,6 +11,10 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
 
+/**
+ * The test module for our service. The only thing we do different is to pass
+ * [RESTMockServer]'s URL as the base URL so we can use it in our tests.
+ */
 @Module
 object RetrofitTestModule {
 

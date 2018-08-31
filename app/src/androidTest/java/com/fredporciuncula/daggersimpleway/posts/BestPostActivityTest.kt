@@ -19,6 +19,10 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
+/**
+ * Thanks to Dagger and our test setup, we won't actually be accessing
+ * any external resource and we'll only be hitting the [RESTMockServer].
+ */
 @RunWith(AndroidJUnit4::class)
 class BestPostActivityTest {
 

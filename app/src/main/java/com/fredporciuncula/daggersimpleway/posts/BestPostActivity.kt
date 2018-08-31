@@ -8,6 +8,9 @@ import com.fredporciuncula.daggersimpleway.R
 import com.fredporciuncula.daggersimpleway.di.injector
 import kotlinx.android.synthetic.main.post_activity.*
 
+/**
+ * A simple activity that has a `ViewModel` as its only dependency.
+ */
 class BestPostActivity : AppCompatActivity() {
 
     private val viewModel by lazy {

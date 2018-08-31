@@ -9,6 +9,9 @@ import io.reactivex.disposables.Disposables
 import timber.log.Timber
 import javax.inject.Inject
 
+/**
+ * A simple [ViewModel] that makes use of its (constructor injected) dependencies and exposes a [LiveData].
+ */
 class BestPostViewModel @Inject constructor(
     private val postsService: PostsService,
     private val bestPostFinder: BestPostFinder

@@ -6,6 +6,9 @@ import com.fredporciuncula.daggersimpleway.di.DaggerApplicationComponent
 import com.fredporciuncula.daggersimpleway.di.DaggerComponentProvider
 import timber.log.Timber
 
+/**
+ * Nothing special here, we just hold our Dagger component and initialize Timber.
+ */
 class DaggerSimpleWayApplication : Application(), DaggerComponentProvider {
 
     override val component: ApplicationComponent by lazy {
