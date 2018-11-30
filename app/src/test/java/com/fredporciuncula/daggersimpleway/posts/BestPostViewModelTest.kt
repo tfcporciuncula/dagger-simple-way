@@ -24,7 +24,7 @@ class BestPostViewModelTest {
 
     @InjectMocks private lateinit var viewModel: BestPostViewModel
 
-    @Test fun testBestPost() {
+    @Test fun `should emit whatever post is returned by the best post finder`() {
         val posts = listOf(newPost(id = 10), newPost(id = 20))
         given(postsService.posts()).willReturn(Single.just(posts))
         given(bestPostFinder.findBestPost(posts)).willReturn(posts.first())
