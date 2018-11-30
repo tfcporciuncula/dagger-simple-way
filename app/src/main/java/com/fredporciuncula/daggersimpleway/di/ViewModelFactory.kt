@@ -6,7 +6,6 @@ import dagger.Lazy
 import dagger.Reusable
 import javax.inject.Inject
 
-@Reusable
 class ViewModelFactory<VM : ViewModel> @Inject constructor(
     private val viewModel: Lazy<VM>
 ) : ViewModelProvider.Factory {

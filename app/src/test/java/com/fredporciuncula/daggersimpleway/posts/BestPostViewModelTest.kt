@@ -9,6 +9,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.BDDMockito.given
+import org.mockito.InjectMocks
 import org.mockito.Mock
 import org.mockito.junit.MockitoJUnitRunner
 
@@ -21,7 +22,7 @@ class BestPostViewModelTest {
 
     @Mock private lateinit var bestPostFinder: BestPostFinder
 
-    private val viewModel get() = BestPostViewModel(postsService, bestPostFinder)
+    @InjectMocks private lateinit var viewModel: BestPostViewModel
 
     @Test fun testBestPost() {
         val posts = listOf(newPost(id = 10), newPost(id = 20))
