@@ -4,6 +4,9 @@ import com.fredporciuncula.daggersimpleway.model.newPost
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 
+/**
+ * A simple unit test for our [BestPostFinder].
+ */
 class BestPostFinderTest {
 
     private val bestPostFinder get() = BestPostFinder()

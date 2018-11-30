@@ -1,5 +1,8 @@
 package com.fredporciuncula.daggersimpleway.model
 
+/**
+ * A very simple factory to help with the unit tests.
+ */
 fun newPost(
     userId: Long = 0,
     id: Long = 1,

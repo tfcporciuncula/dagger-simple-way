@@ -13,6 +13,9 @@ import org.mockito.InjectMocks
 import org.mockito.Mock
 import org.mockito.junit.MockitoJUnitRunner
 
+/**
+ * A simple unit test for our [BestPostViewModel].
+ */
 @RunWith(MockitoJUnitRunner::class)
 class BestPostViewModelTest {
 
