@@ -12,5 +12,5 @@ import javax.inject.Inject
 @Reusable
 class BestPostFinder @Inject constructor() {
 
-    fun findBestPost(posts: List<Post>) = posts[0]
+    fun findBestPost(posts: List<Post>) = posts.first()
 }

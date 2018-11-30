@@ -9,6 +9,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.BDDMockito.given
+import org.mockito.InjectMocks
 import org.mockito.Mock
 import org.mockito.junit.MockitoJUnitRunner
 
@@ -21,9 +22,9 @@ class BestPostViewModelTest {
 
     @Mock private lateinit var bestPostFinder: BestPostFinder
 
-    private val viewModel get() = BestPostViewModel(postsService, bestPostFinder)
+    @InjectMocks private lateinit var viewModel: BestPostViewModel
 
-    @Test fun testBestPost() {
+    @Test fun `should emit whatever post is returned by the best post finder`() {
         val posts = listOf(newPost(id = 10), newPost(id = 20))
         given(postsService.posts()).willReturn(Single.just(posts))
         given(bestPostFinder.findBestPost(posts)).willReturn(posts.first())

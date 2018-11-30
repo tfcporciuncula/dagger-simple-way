@@ -8,7 +8,7 @@ class BestPostFinderTest {
 
     private val bestPostFinder get() = BestPostFinder()
 
-    @Test fun testBestPostFinder() {
+    @Test fun `should return the first post as the best one`() {
         val posts = listOf(newPost(id = 1), newPost(id = 2), newPost(id = 2))
 
         val bestPost = bestPostFinder.findBestPost(posts)

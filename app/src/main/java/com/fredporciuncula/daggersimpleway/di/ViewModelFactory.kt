@@ -14,7 +14,6 @@ import javax.inject.Inject
  *
  * Credits: https://www.reddit.com/r/androiddev/comments/73nge5/the_only_android_viewmodel_factory_youll_need/
  */
-@Reusable
 class ViewModelFactory<VM : ViewModel> @Inject constructor(
     private val viewModel: Lazy<VM>
 ) : ViewModelProvider.Factory {
