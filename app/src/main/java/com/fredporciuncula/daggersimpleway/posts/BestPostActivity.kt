@@ -1,9 +1,9 @@
 package com.fredporciuncula.daggersimpleway.posts
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import com.fredporciuncula.daggersimpleway.R
 import com.fredporciuncula.daggersimpleway.di.injector
 import kotlinx.android.synthetic.main.post_activity.*

@@ -1,7 +1,7 @@
 package com.fredporciuncula.daggersimpleway.test
 
 import android.app.Activity
-import android.support.test.rule.ActivityTestRule
+import androidx.test.rule.ActivityTestRule
 
 /**
  * An [ActivityTestRule] that doesn't automatically launch the activity before each test.

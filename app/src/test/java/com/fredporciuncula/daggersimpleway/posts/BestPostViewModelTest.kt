@@ -1,6 +1,6 @@
 package com.fredporciuncula.daggersimpleway.posts
 
-import android.arch.core.executor.testing.InstantTaskExecutorRule
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.fredporciuncula.daggersimpleway.model.newPost
 import com.fredporciuncula.daggersimpleway.service.PostsService
 import com.google.common.truth.Truth.assertThat

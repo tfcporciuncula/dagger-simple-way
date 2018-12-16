@@ -1,11 +1,11 @@
 package com.fredporciuncula.daggersimpleway.posts
 
-import android.support.test.InstrumentationRegistry
-import android.support.test.espresso.Espresso.onView
-import android.support.test.espresso.assertion.ViewAssertions.matches
-import android.support.test.espresso.matcher.ViewMatchers.withId
-import android.support.test.espresso.matcher.ViewMatchers.withText
-import android.support.test.runner.AndroidJUnit4
+import androidx.test.InstrumentationRegistry
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers.withText
+import androidx.test.runner.AndroidJUnit4
 import com.fredporciuncula.daggersimpleway.R
 import com.fredporciuncula.daggersimpleway.test.LazyActivityTestRule
 import io.appflate.restmock.RESTMockServer

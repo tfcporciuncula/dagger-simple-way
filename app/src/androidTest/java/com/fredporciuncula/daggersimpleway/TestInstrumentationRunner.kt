@@ -2,7 +2,7 @@ package com.fredporciuncula.daggersimpleway
 
 import android.app.Application
 import android.content.Context
-import android.support.test.runner.AndroidJUnitRunner
+import androidx.test.runner.AndroidJUnitRunner
 
 /**
  * This exists just so our instrumentation tests use our [TestApplication] as the application class.
