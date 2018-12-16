@@ -1,18 +1,16 @@
 package com.fredporciuncula.daggersimpleway.posts
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import com.fredporciuncula.daggersimpleway.R
 import com.fredporciuncula.daggersimpleway.di.injector
 import kotlinx.android.synthetic.main.post_activity.*
 
 class BestPostActivity : AppCompatActivity() {
 
-    private val viewModel by lazy {
-        ViewModelProviders.of(this, injector.bestPostViewModelFactory()).get(BestPostViewModel::class.java)
-    }
+    private val viewModel by viewModels<BestPostViewModel>(injector.bestPostViewModelFactory())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
