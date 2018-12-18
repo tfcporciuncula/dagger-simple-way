@@ -16,5 +16,5 @@ interface ApplicationComponent {
         fun build(): ApplicationComponent
     }
 
-    fun bestPostViewModelFactory(): ViewModelFactory<BestPostViewModel>
+    val bestPostViewModel: BestPostViewModel
 }
