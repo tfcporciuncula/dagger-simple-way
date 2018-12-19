@@ -2,8 +2,8 @@ package com.fredporciuncula.daggersimpleway.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import dagger.Lazy
 import javax.inject.Inject
+import javax.inject.Provider
 
 /**
  * This is the only [ViewModel] factory we'll ever need to write as long as we stick with Dagger.
@@ -14,7 +14,7 @@ import javax.inject.Inject
  * Credits: https://www.reddit.com/r/androiddev/comments/73nge5/the_only_android_viewmodel_factory_youll_need/
  */
 class ViewModelFactory<VM : ViewModel> @Inject constructor(
-    private val viewModel: Lazy<VM>
+    private val viewModel: Provider<VM>
 ) : ViewModelProvider.Factory {
 
     @Suppress("UNCHECKED_CAST")
