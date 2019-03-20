@@ -1,6 +1,8 @@
 package com.fredporciuncula.daggersimpleway.di
 
 import android.content.Context
+import com.fredporciuncula.daggersimpleway.posts.BestPostComponent
+import com.fredporciuncula.daggersimpleway.posts.BestPostModule
 import com.fredporciuncula.daggersimpleway.posts.BestPostViewModel
 import dagger.BindsInstance
 import dagger.Component
@@ -16,5 +18,5 @@ interface ApplicationComponent {
         fun build(): ApplicationComponent
     }
 
-    fun bestPostViewModelFactory(): ViewModelFactory<BestPostViewModel>
+    fun with(postDetailsModule: BestPostModule): BestPostComponent
 }

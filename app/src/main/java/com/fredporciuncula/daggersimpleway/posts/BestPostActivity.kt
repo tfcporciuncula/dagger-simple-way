@@ -11,7 +11,8 @@ import kotlinx.android.synthetic.main.post_activity.*
 class BestPostActivity : AppCompatActivity() {
 
     private val viewModel by lazy {
-        ViewModelProviders.of(this, injector.bestPostViewModelFactory()).get(BestPostViewModel::class.java)
+        val viewModelFactory = injector.with(BestPostModule(myIntFromView = 10)).bestPostViewModelFactory()
+        ViewModelProviders.of(this, viewModelFactory).get(BestPostViewModel::class.java)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

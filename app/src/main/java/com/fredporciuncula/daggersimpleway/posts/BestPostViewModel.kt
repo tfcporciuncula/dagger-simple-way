@@ -11,12 +11,17 @@ import javax.inject.Inject
 
 class BestPostViewModel @Inject constructor(
     private val postsService: PostsService,
-    private val bestPostFinder: BestPostFinder
+    private val bestPostFinder: BestPostFinder,
+    myIntFromView: Int
 ) : ViewModel() {
 
     private var disposable = Disposables.empty()
 
     private val bestPost = MutableLiveData<Post>()
+
+    init {
+        Timber.i("myIntFromView = $myIntFromView")
+    }
 
     fun bestPost(): LiveData<Post> = bestPost
 
