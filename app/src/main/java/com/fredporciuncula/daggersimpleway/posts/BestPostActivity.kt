@@ -4,14 +4,15 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.fredporciuncula.daggersimpleway.R
-import com.fredporciuncula.daggersimpleway.di.getViewModel
 import com.fredporciuncula.daggersimpleway.di.injector
 import com.fredporciuncula.daggersimpleway.di.viewModel
 import kotlinx.android.synthetic.main.post_activity.*
 
 class BestPostActivity : AppCompatActivity() {
 
-    private val viewModel by viewModel(this) { injector.bestPostViewModel }
+    private val viewModel by viewModel(this) {
+        injector.bestPostViewModelFactory.create(myIntFromView = 10)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

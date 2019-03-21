@@ -5,14 +5,25 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.fredporciuncula.daggersimpleway.model.Post
 import com.fredporciuncula.daggersimpleway.service.PostsService
+import com.squareup.inject.assisted.Assisted
+import com.squareup.inject.assisted.AssistedInject
 import io.reactivex.disposables.Disposables
 import timber.log.Timber
-import javax.inject.Inject
 
-class BestPostViewModel @Inject constructor(
+class BestPostViewModel @AssistedInject constructor(
     private val postsService: PostsService,
-    private val bestPostFinder: BestPostFinder
+    private val bestPostFinder: BestPostFinder,
+    @Assisted myIntFromView: Int
 ) : ViewModel() {
+
+    @AssistedInject.Factory
+    interface Factory {
+        fun create(myIntFromView: Int): BestPostViewModel
+    }
+
+    init {
+        Timber.i("myIntFromView = $myIntFromView")
+    }
 
     private var disposable = Disposables.empty()
 
